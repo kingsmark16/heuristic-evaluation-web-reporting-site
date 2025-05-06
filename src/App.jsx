@@ -36,7 +36,7 @@ function App() {
         <div className="flex-1">
           
           <Routes>
-            <Route path="/home/evaluated-system" element={<EvaluatedSystem/>}/>
+            <Route path="/" element={<EvaluatedSystem/>}/>
             <Route path="/home/evaluators" element={<Evaluators/>}/>
 
             <Route path="/decide-framworks/determine" element={<Determine/>}/>

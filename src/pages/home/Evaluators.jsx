@@ -2,7 +2,7 @@
 
 const Evaluators = () => {
   return (
-    <div>Evaluators</div>
+    <div>Evaluatorss</div>
   )
 }
 

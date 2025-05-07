@@ -9,5 +9,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.VITE_BASE_PATH || "/heuristic-evaluation-web-reporting-site"
+  base: process.env.VITE_BASE_PATH || "/"
 })

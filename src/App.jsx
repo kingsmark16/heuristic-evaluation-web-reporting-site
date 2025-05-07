@@ -17,24 +17,24 @@ import UiImprovements from "./pages/proposedImprovements/UiImprovements"
 import Justificatiion from "./pages/proposedImprovements/Justificatiion"
 import { useState } from "react"
 
+
 function App() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const closeSidebar = () => setSidebarOpen(false);
   
   return (
-    <div className="flex flex-row w-full">
+    <div className="flex h-screen overflow-hidden">
       <Sidebar isOpen={sidebarOpen} onLinkClick={closeSidebar}/>
       {sidebarOpen && (
-    <div
-      onClick={() => setSidebarOpen(false)}
-      className="fixed inset-0 z-40 bg-black opacity-40 lg:hidden"
-    ></div>
-)}
+        <div
+          onClick={() => setSidebarOpen(false)}
+          className="fixed inset-0 z-40 bg-black opacity-40 lg:hidden"
+        ></div>
+      )}
       <div className="flex flex-col flex-1">
         <Header toggleSidebar={() => setSidebarOpen(prev => !prev)}/>
-        <div className="flex-1">
-          
+        <div className="flex-1 overflow-y-auto">
           <Routes>
             <Route path="/" element={<EvaluatedSystem/>}/>
             <Route path="/home/evaluators" element={<Evaluators/>}/>

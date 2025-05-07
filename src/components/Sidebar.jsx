@@ -13,26 +13,27 @@ const Sidebar = ({isOpen, onLinkClick}) => {
   
   return (
     <div className={`
-    fixed top-0 left-0 z-50 h-screen w-80 bg-base-100 border-r-2 border-base-200 overflow-y-auto
+    fixed top-0 left-0 z-50 h-screen w-80 bg-base-100 border-r-2 border-base-200 shadow-2xl overflow-y-auto
     transform transition-transform duration-300 ease-in-out
     ${isOpen ? 'translate-x-0' : '-translate-x-full'}
     lg:translate-x-0 lg:static lg:block
   `}>
+      <div className="sticky top-0 z-40 bg-base-100 w-68 pt-6 pb-6 border-b-3 border-base-300 mx-auto">
+        <span className="uppercase font-mono text-2xl text-center block text-base-content">Group 1</span>
+      </div>
       <div className="mb-8 flex justify-center">
-        <div className="fixed flex justify-baseline bg-base-100 w-64 pt-6 pb-3 border-b-2 border-base-300">
-          <span className="uppercase font-mono text-2xl text-center">Group 1</span>
-        </div>
-        <ul className="mt-23 flex flex-col space-y-5 mb-8">
+        
+        <ul className="mt-6 flex flex-col space-y-5 mb-6">
           <li className="text-base">
-            <button onClick={() => setHomeOpen(!homeOpen)} className="flex justify-center items-center space-x-2 text-base-content font-medium">
+            <button onClick={() => setHomeOpen(!homeOpen)} className="w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-baseline items-center space-x-2 text-base-content font-medium">
               <House className="size-5"/>
-              Home
-              <span className="ml-2">{homeOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
+              <p className="grow text-left">Home</p>
+              <span className="flex-none">{homeOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
             </button>
             {homeOpen && (
-              <ul className="mt-2 space-y-2 ml-7 text-sm w-48">
+              <ul className="mt-2 space-y-2 ml-7 text-sm font-light w-48">
                 <li>
-                  <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/home/evaluated-system">Evaluated System</NavLink>
+                  <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/">Evaluated System</NavLink>
                 </li>
                 <li>
                   <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/home/evaluators">Evaluators</NavLink>
@@ -41,13 +42,13 @@ const Sidebar = ({isOpen, onLinkClick}) => {
             )}
           </li>
           <li className="text-base">
-            <button onClick={() => setDecideFrameworksOpen(!decideFrameworksOpen)} className="flex justify-center items-center space-x-2 text-base-content font-medium">
+            <button onClick={() => setDecideFrameworksOpen(!decideFrameworksOpen)} className="w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-center items-center space-x-2 text-base-content font-medium">
               <BrainCog className="size-5"/>
-              DECIDE Frameworks
-              <span className="ml-2">{decideFrameworksOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
+              <p className="grow text-left">DECIDE Frameworks</p>
+              <span className="">{decideFrameworksOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
             </button>
             {decideFrameworksOpen && (
-                <ul className="mt-2 space-y-2 ml-7 text-sm w-48">
+                <ul className="mt-2 space-y-2 ml-7 text-sm font-light w-48">
                   <li>
                     <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="decide-framworks/determine"><span>D</span>etermine the Goals</NavLink>
                   </li>
@@ -70,13 +71,13 @@ const Sidebar = ({isOpen, onLinkClick}) => {
               )}
           </li>
           <li>
-            <button onClick={() => setEvaluationResultsOpen(!evaluationResultsOpen)} className="flex justify-center items-center space-x-2 text-base-content font-medium">
+            <button onClick={() => setEvaluationResultsOpen(!evaluationResultsOpen)} className="w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-center items-center space-x-2 text-base-content font-medium">
               <PencilRuler className="size-5"/>
-              Evaluation Results
-              <span className="ml-2">{evaluationResultsOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
+              <span className="grow text-left">Evaluation Results</span>
+              <span className="">{evaluationResultsOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
             </button>
             {evaluationResultsOpen && (
-              <ul className="mt-2 space-y-2 ml-7 text-sm w-48">
+              <ul className="mt-2 space-y-2 ml-7 text-sm font-light w-48">
                 <li>
                   <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/evaluation-result/usability-problems">Usability Problems Found</NavLink>
                 </li>
@@ -93,13 +94,13 @@ const Sidebar = ({isOpen, onLinkClick}) => {
             )}
           </li>
           <li>
-            <button onClick={() => setProposedImprovementsOpen(!proposedImprovementsOpen)} className="flex justify-center items-center space-x-2 text-base-content font-medium">
+            <button onClick={() => setProposedImprovementsOpen(!proposedImprovementsOpen)} className="w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-center items-center space-x-2 text-base-content font-medium">
             <HandHelping className="size-5"/>
-            Proposed Improvements
-            <span className="ml-2">{proposedImprovementsOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
+            <span className="grow text-left">Proposed Improvements</span>
+            <span className="">{proposedImprovementsOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
             </button>
             {proposedImprovementsOpen && (
-              <ul className="mt-2 space-y-2 ml-7 text-sm w-48">
+              <ul className="mt-2 space-y-2 ml-7 text-sm font-light w-48">
                 <li>
                   <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/proposed-improvements/ui-improvements">UI Improvements</NavLink>
                 </li>

@@ -1,16 +1,17 @@
 import { Menu } from "lucide-react"
 
+
 const Header = ({toggleSidebar}) => {
   return (
-    <nav className="w-full top-0 z-10 bg-base-100">
+    <nav className="sticky w-full top-0 z-10 bg-base-100">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
             <div className="flex items-center justify-between">
                 <div className="flex items-center justify-start space-x-1.5">
                     <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" onClick={toggleSidebar} className="inline-flex lg:hidden items-center p-2 text-sm text-base-content rounded-lg hover:bg-base-300 focus:outline-none">
-                        <Menu className="size-6"/>
+                        <Menu className="size-5 sm:size-6"/>
                     </button>
                     <a href="#" className="flex ms-2 md:me-24">
-                    <span className="self-center font-medium text-sm md:text-xl sm:text-lg sm:font-semibold whitespace-normal text-base-content">HEURISTIC EVALUATION & WEB REPORTING SITE</span>
+                    <span className="self-center font-medium text-sm md:text-xl sm:text-lg sm:font-semibold whitespace-normal text-base-content">Hueristic Evaluation & Web Reporting Site</span>
                     </a>
                 </div>
                 <div className="dropdown">
@@ -47,8 +48,8 @@ const Header = ({toggleSidebar}) => {
                             type="radio"
                             name="theme-dropdown"
                             className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Cyberpunk"
-                            value="cyberpunk" />
+                            aria-label="Lemonade"
+                            value="lemonade" />
                         </li>
                         <li>
                         <input
@@ -63,8 +64,16 @@ const Header = ({toggleSidebar}) => {
                             type="radio"
                             name="theme-dropdown"
                             className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Aqua"
-                            value="aqua" />
+                            aria-label="Abyss"
+                            value="abyss" />
+                        </li>
+                        <li>
+                        <input
+                            type="radio"
+                            name="theme-dropdown"
+                            className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Forest"
+                            value="forest" />
                         </li>
                     </ul>
                 </div>

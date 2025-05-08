@@ -33,8 +33,9 @@ function App() {
         ></div>
       )}
       <div className="flex flex-col flex-1">
+        
         <Header toggleSidebar={() => setSidebarOpen(prev => !prev)}/>
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto">
           <Routes>
             <Route path="/" element={<EvaluatedSystem/>}/>
             <Route path="/home/evaluators" element={<Evaluators/>}/>

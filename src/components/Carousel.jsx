@@ -14,7 +14,7 @@ const Carousel = () => {
         <div
           key={data.id}
           id={data.id}
-          className="carousel-item relative w-full snap-center flex-shrink-0"
+          className="carousel-item relative w-full snap-center flex-shrink-0 border-y-2 border-base-300"
         >
           <img
             src={data.img_path_md_min}

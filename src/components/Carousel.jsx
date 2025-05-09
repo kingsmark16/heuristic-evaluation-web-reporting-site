@@ -1,6 +1,7 @@
+import { forwardRef } from "react"
 import { CarouselData } from "../data/EvaluatedSystemData"
 
-const Carousel = () => {
+const Carousel = forwardRef((props, ref) => {
   const scrollToSlide = (id) => {
     const el = document.getElementById(id.replace('#', ''))
     if (el) {
@@ -9,7 +10,7 @@ const Carousel = () => {
   }
 
   return (
-    <div className="carousel w-full mt-3 overflow-x-auto scroll-smooth snap-x flex">
+    <div ref={ref} className="carousel w-full mt-3 overflow-x-auto scroll-smooth snap-x flex">
       {CarouselData.map((data) => (
         <div
           key={data.id}
@@ -35,6 +36,6 @@ const Carousel = () => {
       ))}
     </div>
   )
-}
+})
 
 export default Carousel

@@ -16,6 +16,7 @@ import ConclusionOfEvaluation from "./pages/evaluationResults/ConclusionOfEvalua
 import UiImprovements from "./pages/proposedImprovements/UiImprovements"
 import Justificatiion from "./pages/proposedImprovements/Justificatiion"
 import { useState } from "react"
+import ScrollToTop from "./components/ScrollToTop"
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
       <div className="flex flex-col flex-1">
         
         <Header toggleSidebar={() => setSidebarOpen(prev => !prev)}/>
-        <div className="flex-1 min-h-0 overflow-y-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto main-scroll-container">
+        <ScrollToTop />
           <Routes>
             <Route path="/" element={<EvaluatedSystem/>}/>
             <Route path="/home/evaluators" element={<Evaluators/>}/>

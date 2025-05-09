@@ -1,10 +1,41 @@
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ChevronUp, House, BrainCog, PencilRuler, HandHelping } from "lucide-react"
 import { ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = ({isOpen, onLinkClick}) => {
+
+  useGSAP(() => {
+    gsap.fromTo('.group1',
+      {
+        y: -50,
+        opacity: 0
+      },
+      {
+         y: 0,
+         opacity: 1,
+         stagger: 0.2,
+         duration: 1,
+         ease: 'power2.easeInOut'
+      }
+    )
+    gsap.fromTo('ul',
+      {
+        x: -50,
+        opacity: 0
+      },
+      {
+         x: 0,
+         opacity: 1,
+         stagger: 0.2,
+         duration: 1,
+         ease: 'power2.easeInOut'
+      }
+    )
+  })
 
   const [homeOpen, setHomeOpen] = useState(false);
   const [decideFrameworksOpen, setDecideFrameworksOpen] = useState(false);
@@ -13,13 +44,13 @@ const Sidebar = ({isOpen, onLinkClick}) => {
   
   return (
     <div className={`
-    fixed top-0 left-0 z-50 h-screen w-80 bg-base-100 border-r-2 border-base-200 shadow-2xl overflow-y-auto
+    fixed top-0 left-0 z-50 h-screen w-70 md:w-80 bg-base-100 border-r-2 border-base-200 shadow-2xl overflow-y-auto
     transform transition-transform duration-300 ease-in-out
     ${isOpen ? 'translate-x-0' : '-translate-x-full'}
     lg:translate-x-0 lg:static lg:block
   `}>
       <div className="sticky top-0 z-40 bg-base-100 w-68 pt-6 pb-6 border-b-3 border-base-300 mx-auto">
-        <span className="uppercase font-mono text-2xl text-center block text-base-content">Group 1</span>
+        <span className="group1 uppercase font-mono text-2xl text-center block text-base-content">Group 1</span>
       </div>
       <div className="mb-8 flex justify-center">
         

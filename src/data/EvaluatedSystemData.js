@@ -4,6 +4,7 @@ import Carousel3 from '../assets/Carousel-3.png'
 import Carousel2md from '../assets/Carousel-2-md.png'
 import Carousel1md from '../assets/Carousel-1-md.png'
 import Carousel3md from '../assets/Carousel-3-md.png'
+import { ChevronRight } from 'lucide-react'
 
 export const CarouselData = [
     {
@@ -37,3 +38,18 @@ export const SystemDescription =
         ]
             
     }
+
+export const BTNData = {
+    previous: {
+        name: "",
+        icon: null,
+        pageTitle: "",
+        path: ""
+    },
+    next: {
+        name: "Next",
+        icon: ChevronRight,
+        pageTitle: "Evaluators",
+        path: "/home/evaluators"
+    }
+}

@@ -3,6 +3,8 @@ import Onsay from '../assets/Onsay.jpg'
 import Bermejo from '../assets/Bermejo.jpg'
 import Oraller from '../assets/Oraller.jpg'
 import Radores from '../assets/Radores.jpg'
+import { ChevronLeft } from 'lucide-react'
+
 
 export const EvaluatorsData = [
     {
@@ -31,3 +33,17 @@ export const EvaluatorsData = [
         photo: Bermejo,
     }
 ]
+export const BTNData = {
+    previous: {
+        name: "Prev",
+        icon: ChevronLeft,
+        pageTitle: "Evaluated System",
+        path: "/"
+    },
+    next: {
+        name: "",
+        icon: null,
+        pageTitle: "",
+        path: ""
+    }
+}

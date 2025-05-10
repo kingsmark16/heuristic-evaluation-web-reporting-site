@@ -53,7 +53,7 @@ const Header = ({toggleSidebar}) => {
                         <Menu className="anim-menu size-5 sm:size-6"/>
                     </button>
                     <a href="#" className="flex ms-2 md:me-24">
-                    <span className="anim-span self-center font-medium text-sm md:text-xl sm:text-lg sm:font-semibold whitespace-normal text-base-content">Hueristic Evaluation & Web Reporting Site</span>
+                    <span className="anim-span self-center font-normal text-sm md:text-xl sm:text-lg sm:font-medium whitespace-normal text-base-content">Hueristic Evaluation & Web Reporting Site</span>
                     </a>
                 </div>
                 <div className="dropdown">

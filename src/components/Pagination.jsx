@@ -6,7 +6,7 @@ const Pagination = ({ btnData }) => {
   const { previous, next } = btnData;
 
   return (
-    <div className='mx-3 mb-2 md:mb-5 relative h-20'>
+    <div className='mx-6 mb-2 md:mb-5 relative h-20'>
       {previous?.icon && (
         <button
           onClick={() => navigate(previous.path)}

@@ -6,7 +6,7 @@ const Header = ({toggleSidebar}) => {
     useGSAP(() => {
         gsap.fromTo('.anim-span',
           {
-            x: 500,
+            x: 50,
             opacity: 0
           },
           {

@@ -3,7 +3,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 /*DETERMINE*/
 export const DetermineData = {
     title: "Determine the Goals of the Evaluation",
-    goals: [
+    info: "The goals of evaluating the Water Billing Management System are to:",
+    list: [
         "Assess how effectively the system supports users in performing their tasks.",
         "Identify any usability issues that may affect user experience or efficiency.",
         "Determine whether the system’s features function as intended.",
@@ -32,7 +33,8 @@ export const DetermineBTNData = {
 /*Explore*/
 export const ExploreData = {
     title: "Explore the Questions",
-    questions: [
+    info: "To guide the evaluation, the following key questions will be explored:",
+    list: [
         "Are users able to navigate the system easily and understand how to use its features?",
         "Do users encounter any difficulties while performing common tasks such as adding clients or generating billing statements?",
         "Are the system's functions—like billing calculation, data management, and login/logout—working correctly and consistently?",
@@ -60,8 +62,8 @@ export const ExploreBTNData = {
 /*CHOOSE*/
 export const ChooseData = {
     title: "Choose the Evaluation Approach and Methods.",
-    description: "The chosen evaluation method is Heuristic Evaluation using Jakob Nielsen’s 10 Usability Heuristics. This method involves usability experts systematically examining the user interface of the Water Billing Management System to identify usability problems based on established principles.",
-    heuristics: [
+    info: "The chosen evaluation method is Heuristic Evaluation using Jakob Nielsen’s 10 Usability Heuristics. This method involves usability experts systematically examining the user interface of the Water Billing Management System to identify usability problems based on established principles.",
+    list: [
         "Visibility of system status",
         "Match between system and the real world",
         "User control and freedom",
@@ -92,7 +94,8 @@ export const ChooseBTNData = {
 /*Identify*/
 export const IdentifyData = {
     title: "Identify the Practical Issues",
-    issues: [
+    info: "To ensure a smooth and effective heuristic evaluation, the following practical considerations are addressed:",
+    list: [
         "Five evaluators will participate, providing a balanced and comprehensive review of the system.",
         "All evaluators will be given access to the system with the necessary permissions to explore its key features.",
         "The evaluation will focus on the core modules and user interface elements that represent the main functionality of the system.",
@@ -118,7 +121,8 @@ export const IdentifyBTNData = {
 /*Decide*/
 export const DecideData = {
     title: "Decide how to Deal with the Ethical Issues",
-    issues: [
+    info: "Ethical standards must be maintained throughout the process. The following measures will be taken:",
+    list: [
         "All evaluators will be informed of the purpose of the evaluation and their role in the process.",
         "Efforts will be made to ensure evaluators approach the system objectively, regardless of prior knowledge or opinions.",
         "Feedback will be constructive and professional, focusing on improving the system rather than criticizing individuals.",
@@ -142,9 +146,10 @@ export const DecideBTNData = {
 }
 
 /*Evaluate*/
-export const EvaluateData = {
+export const EvaluateDataTop = {
     title: "Evaluation, Analyze, Interpret and Present the Data",
-    steps: [
+    info: "After all evaluators complete their heuristic assessments, the following steps will be taken to process and present the findings:",
+    list: [
         "Gather all completed heuristic evaluation workbook from the five evaluators, including notes, identified issues, violated heuristics, and recommendation.",
         "Combine and organize the issues identified by all evaluators, noting recurring problems.",
         "Categorize the usability issues based on which of Jakob Nielsen’s 10 heuristics they violate, to identify common patterns.",
@@ -156,6 +161,15 @@ export const EvaluateData = {
         "Associated heuristics",
         "Suggested improvements"
     ]
+}
+export const EvaluateDataBottom = {
+    info: "Create a well-structured evaluation report summarizing:",
+    list: [
+        "Key usability issues",
+        "Associated heuristics",
+        "Suggested improvements"
+    ]
+
 }
 export const EvaluateBTNData = {
     previous: {

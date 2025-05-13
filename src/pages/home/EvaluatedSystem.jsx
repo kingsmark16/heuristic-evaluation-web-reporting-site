@@ -49,7 +49,7 @@ const EvaluatedSystem = () => {
                 )}
           </ul>
         </div>
-        <div className="divider mt-5 mx-3 mb-0"></div>
+        
         <Pagination btnData={BTNData}/>
     </div>
   )

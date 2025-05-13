@@ -63,7 +63,7 @@ const Evaluators = () => {
           </div>
         ))}
       </div>
-      <div className="divider my-2 mx-3 mb-0"></div>
+      
       <Pagination btnData={BTNData}/>
     </div>
   );

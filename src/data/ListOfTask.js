@@ -1,4 +1,23 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+export const info = "List of tasks used during evaluation performed by the evaluator during testing";
+export const title = "Task and Scenario";
+export const TaskBTNData = {
+    previous: {
+        name: "Prev",
+        icon: ChevronLeft,
+        pageTitle: "Heuristics...",
+        path: "/evaluation-result/workbook"
+    },
+    next: {
+        name: "Next",
+        icon: ChevronRight,
+        pageTitle: "Conclusion...",
+        path: "/evaluation-result/conclusion-of-evaluation"
+    }
+}
 export const Tasks = {
+    
     addingCategory: [
         "In the navigation bar, go to List of Category.",
         "Click Create New and a fill up form will appear.",
@@ -43,5 +62,4 @@ export const Tasks = {
         "Select Edit and enter the details to be updated",
         "Click save and the system will redirect to the List."
     ]
-
 }

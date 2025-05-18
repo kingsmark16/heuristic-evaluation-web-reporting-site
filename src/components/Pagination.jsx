@@ -10,7 +10,7 @@ const Pagination = ({ btnData }) => {
       {previous?.icon && (
         <button
           onClick={() => navigate(previous.path)}
-          className='flex space-x-2 md:space-x-3 items-center justify-between absolute left-1 px-1 md:px-1.5 py-1.5 top-1/2 -translate-y-1/2 bg-base-content/60 text-base-200/80 rounded-md transition-all duration-300 hover:bg-base-content hover:scale-105 hover:shadow-lg focus:bg-base-content'
+          className='flex space-x-2 md:space-x-3 items-center justify-between absolute left-1 px-1 md:px-1.5 py-1.5 top-1/2 -translate-y-1/2 bg-neutral text-neutral-content rounded-md transition-all duration-300 hover:bg-neutral-content hover:text-neutral hover:scale-105 hover:shadow-lg'
         >
           <span><previous.icon className='size-4 md:size-5' /></span>
           <div>
@@ -22,7 +22,7 @@ const Pagination = ({ btnData }) => {
       {next?.icon && (
         <button
           onClick={() => navigate(next.path)}
-          className='flex space-x-2 md:space-x-3 items-center justify-between absolute right-1 px-1 md:px-1.5 py-1.5 top-1/2 -translate-y-1/2 bg-base-content/60 text-base-200/80 rounded-md transition-all duration-300 hover:bg-base-content hover:scale-105 hover:shadow-lg focus:bg-base-content'
+          className='flex space-x-2 md:space-x-3 items-center justify-between absolute right-1 px-1 md:px-1.5 py-1.5 top-1/2 -translate-y-1/2 bg-neutral text-neutral-content rounded-md transition-all duration-300 hover:bg-neutral-content hover:text-neutral hover:scale-105 hover:shadow-lg'
         >
           <div>
             <p className='text-[8px] md:text-[10px] text-end font-light'>{next.name}</p>

@@ -3,7 +3,7 @@ import Onsay from '../assets/Onsay.jpg'
 import Bermejo from '../assets/Bermejo.jpg'
 import Oraller from '../assets/Oraller.jpg'
 import Radores from '../assets/Radores.jpg'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 
 export const EvaluatorsData = [
@@ -41,9 +41,9 @@ export const BTNData = {
         path: "/"
     },
     next: {
-        name: "",
-        icon: null,
-        pageTitle: "",
-        path: ""
+        name: "Next",
+        icon: ChevronRight,
+        pageTitle: "Determine...",
+        path: "/decide-framworks/determine"
     }
 }

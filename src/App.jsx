@@ -14,7 +14,6 @@ import UsabilityProblems from "./pages/evaluationResults/UsabilityProblems"
 import ListOfTask from "./pages/evaluationResults/ListOfTask"
 import ConclusionOfEvaluation from "./pages/evaluationResults/ConclusionOfEvaluation"
 import UiImprovements from "./pages/proposedImprovements/UiImprovements"
-import Justificatiion from "./pages/proposedImprovements/Justificatiion"
 import { useState } from "react"
 import ScrollToTop from "./components/ScrollToTop"
 
@@ -55,7 +54,7 @@ function App() {
             <Route path="/evaluation-result/conclusion-of-evaluation" element={<ConclusionOfEvaluation/>}/>
 
             <Route path="/proposed-improvements/ui-improvements" element={<UiImprovements/>}/>
-            <Route path="/proposed-improvements/justification" element={<Justificatiion/>}/>
+            
           </Routes>
         </div>
       </div>

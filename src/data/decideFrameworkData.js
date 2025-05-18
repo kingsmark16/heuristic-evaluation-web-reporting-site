@@ -16,10 +16,10 @@ export const DetermineData = {
 }
 export const DetermineBTNData = {
     previous: {
-        name: "",
-        icon: null,
-        pageTitle: "",
-        path: ""
+        name: "Prev",
+        icon: ChevronLeft,
+        pageTitle: "Evaluuators...",
+        path: "/home/evaluators"
     },
     next: {
         name: "Next",
@@ -179,9 +179,9 @@ export const EvaluateBTNData = {
         path: "/decide-framworks/decide"
     },
     next: {
-        name: "",
-        icon: null,
-        pageTitle: "",
-        path: ""
+        name: "Next",
+        icon: ChevronRight,
+        pageTitle: "Usability...",
+        path: "/evaluation-result/usability-problems"
     }
 }

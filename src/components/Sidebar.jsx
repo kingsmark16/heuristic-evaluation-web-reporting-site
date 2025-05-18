@@ -40,7 +40,7 @@ const Sidebar = ({isOpen, onLinkClick}) => {
   const [homeOpen, setHomeOpen] = useState(false);
   const [decideFrameworksOpen, setDecideFrameworksOpen] = useState(false);
   const [evaluationResultsOpen, setEvaluationResultsOpen] = useState(false);
-  const [proposedImprovementsOpen, setProposedImprovementsOpen] = useState(false);
+
   
   return (
     <div className={`
@@ -49,7 +49,7 @@ const Sidebar = ({isOpen, onLinkClick}) => {
     ${isOpen ? 'translate-x-0' : '-translate-x-full'}
     lg:translate-x-0 lg:static lg:block
   `}>
-      <div className="sticky top-0 z-40 bg-base-100 w-68 pt-6 pb-6 border-b-3 border-base-300 mx-auto">
+      <div className="sticky top-0 z-40 bg-base-100 w-68 pt-6 pb-6 border-base-300 mx-auto">
         <span className="group1 uppercase font-mono text-2xl text-center block text-base-content">Group 1</span>
       </div>
       <div className="mb-8 flex justify-center">
@@ -125,21 +125,18 @@ const Sidebar = ({isOpen, onLinkClick}) => {
             )}
           </li>
           <li>
-            <button onClick={() => setProposedImprovementsOpen(!proposedImprovementsOpen)} className="w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-center items-center space-x-2 text-base-content font-medium">
-            <HandHelping className="size-5"/>
-            <span className="grow text-left">Proposed Improvements</span>
-            <span className="">{proposedImprovementsOpen ? <ChevronUp className="size-5"/> : <ChevronDown className="size-5"/>}</span>
-            </button>
-            {proposedImprovementsOpen && (
-              <ul className="mt-2 space-y-2 ml-7 text-sm font-light w-48">
-                <li>
-                  <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/proposed-improvements/ui-improvements">UI Improvements</NavLink>
-                </li>
-                <li>
-                  <NavLink onClick={onLinkClick} className={({isActive}) => `block hover:bg-base-content/30 focus:bg-base-200 active:bg-base-300/40 w-full py-1.5 px-3 rounded-sm transition duration-300 ease-in-out ${isActive ? 'bg-base-300/40' : ''}`} to="/proposed-improvements/justification">Justification</NavLink>
-                </li>
-              </ul>
-            )}
+            <NavLink
+              to="/proposed-improvements/ui-improvements"
+              onClick={onLinkClick}
+              className={({ isActive }) =>
+                `w-65 hover:bg-base-content/30 active:bg-base-300/40 transition duration-300 ease-in-out py-2 px-3 rounded-sm flex justify-center items-center space-x-2 text-base-content font-medium ${
+                  isActive ? 'bg-base-300/40' : ''
+                }`
+              }
+            >
+              <HandHelping className="size-5" />
+              <span className="grow text-left">Proposed Improvements</span>
+            </NavLink>
           </li>
         </ul>
       </div>

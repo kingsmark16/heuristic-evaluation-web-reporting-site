@@ -57,7 +57,7 @@ const Header = ({toggleSidebar}) => {
                     </a>
                 </div>
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn m-1 text-xs sm:text-base px-4 sm:px-4 sm:py-2 active:scale-105 transition-transform duration-200 ease-in-out" aria-label="Theme Dropdown">
+                    <div tabIndex={0} role="button" className="btn m-1 text-xs sm:text-base px-4 sm:px-4 sm:py-2 bg-neutral text-neutral-content hover:scale-105 transition-transform duration-300 ease-in-out" aria-label="Theme Dropdown">
                         Theme
                         <svg
                         width="12px"
@@ -76,14 +76,6 @@ const Header = ({toggleSidebar}) => {
                             className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
                             aria-label="Default"
                             value="default" />
-                        </li>
-                        <li>
-                        <input
-                            type="radio"
-                            name="theme-dropdown"
-                            className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Retro"
-                            value="retro" />
                         </li>
                         <li>
                         <input
@@ -114,8 +106,24 @@ const Header = ({toggleSidebar}) => {
                             type="radio"
                             name="theme-dropdown"
                             className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Forest"
-                            value="forest" />
+                            aria-label="Caramellatte"
+                            value="caramellatte" />
+                        </li>
+                        <li>
+                        <input
+                            type="radio"
+                            name="theme-dropdown"
+                            className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Luxury"
+                            value="luxury" />
+                        </li>
+                        <li>
+                        <input
+                            type="radio"
+                            name="theme-dropdown"
+                            className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Autumn"
+                            value="autumn" />
                         </li>
                     </ul>
                 </div>

@@ -34,7 +34,7 @@ export const SystemDescription =
     {
         description: "This simple project is a Water Billing Management System. This is a web-based application project developed in PHP and MySQL Database. This project provides an online and automated platform for the water providers' management to easily store, retrieve, and calculate the billing statements of their consumers. The application stores and generates the consumers' or clients' billing statements for each meter reading. This project was developed with Bootstrap Framework and AdminLTE Template for the user interface. It also consists of user-friendly features and functionalities.",
         features: [
-            "Home Page", "Category Management", "Client/Consumer Management System", "Billing Management", "User Management", "Update System Information", "Update Account Details/Credentials", "Login/Logout" 
+            "Category Management", "Client/Consumer Management System", "Billing Management", "User Management", "Update System Information", "Update Account Details/Credentials", "Login/Logout" 
         ]
             
     }

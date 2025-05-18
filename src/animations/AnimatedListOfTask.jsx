@@ -10,10 +10,11 @@ const AnimatedListOfTask = ({ Tasks, info }) => {
       const taskDivs = gsap.utils.toArray(".task-div");
       gsap.from(taskDivs, {
         opacity: 0,
-        x: 20,
-        duration: 0.6,
+        y: 20,
+        duration: 1,
         stagger: 0.2,
         ease: "power2.out",
+        delay: 0.4
       });
     }, containerRef);
 

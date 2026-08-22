@@ -1,12 +1,72 @@
-# React + Vite
+# Heuristic Evaluation Web Reporting Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite web app that presents a heuristic evaluation report for a **Water Billing Management System**.  
+The site organizes evaluator details, DECIDE framework outputs, usability findings, workbook PDFs, and proposed UI improvements in a single navigable interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sidebar-driven navigation across report sections
+- DECIDE framework pages (Determine, Explore, Choose, Identify, Decide, Evaluate)
+- Evaluation results pages for:
+  - Usability problems found
+  - Heuristic evaluation workbooks
+  - Tasks used during evaluation
+  - Evaluation conclusion
+- Proposed UI improvement section
+- Animated UI elements (GSAP + Framer Motion)
+- Theme switching support (DaisyUI themes)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Routing:** React Router
+- **Styling:** Tailwind CSS + DaisyUI + Flowbite
+- **Animation:** GSAP + Framer Motion
+- **PDF Rendering:** react-pdf
+- **Icons:** lucide-react
+
+## Project Structure
+
+```text
+src/
+  components/          Reusable UI components
+  pages/               Route-based pages
+  data/                Report content and page data
+  assets/              Images used in the report
+public/                Heuristic evaluation workbook PDFs
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (recommended)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+Open the local URL shown by Vite (typically `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev` – Start local development server
+- `npm run host` – Start dev server exposed on local network
+- `npm run build` – Build for production
+- `npm run preview` – Preview production build
+- `npm run lint` – Run ESLint
+
+## Deployment Notes
+
+- SPA rewrite rules are configured in `vercel.json`.
+- Base path can be configured with `VITE_BASE_PATH`.
